@@ -3,7 +3,7 @@ const uglify = require("gulp-uglify");
 const sass = require("gulp-sass");
 
 function copyImages() {
-  return gulp.src("./src/images/**/*.{svg,webp}", {encoding: false})
+  return gulp.src("./src/images/**/*.{svg,webp,png,ico,webmanifest}", {encoding: false})
   .pipe(gulp.dest("./public/images/"));
 }
 

@@ -57,9 +57,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const themeToggleButton = document.getElementById("theme-toggle");
   const darkIcon = document.getElementById("theme-toggle-dark-icon");
   const lightIcon = document.getElementById("theme-toggle-light-icon");
+  
   const currentTheme = localStorage.getItem("theme");
 
-  if (currentTheme === "dark") {
+  const prefersDarkMode = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+  
+  if (currentTheme === "dark" || (currentTheme === null && prefersDarkMode)) {
     document.documentElement.classList.add("dark");
     darkIcon.classList.remove("hidden");
     lightIcon.classList.add("hidden");

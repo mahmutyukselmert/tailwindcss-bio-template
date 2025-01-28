@@ -5,7 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Mahmut Yüksel Mert</title>
+    <meta name="description" content="Mahmut Yüksel Mert, full-stack web developer">
+    <meta name="keywords" content="full-stack web developer, web developer, front-end developer, back-end developer, mobile developer, mahmut yüksel mert, mahmutyukselmert">
+    <meta name="author" content="Mahmut Yüksel Mert">
     <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="images/favicon/site.webmanifest" />
 </head>
 
 <body class="dark:bg-neutral-800">
@@ -100,28 +108,28 @@
         <section class="xl:container lg:container relative mx-auto pb-12 xl:px-24 lg:px-24 md:px-6 sm:px-6">
             <div class="container relative mx-auto">
                 <div class="xl:w-1/2 lg:w-1/2 mx-auto relative py-8">
-                    <form class="" action="" method="POST" onsubmit="return false">
+                    <form class="" action="" id="contactForm" method="POST" onsubmit="return false">
                         <div class="my-4">
                             <label for="" class="dark:text-slate-400">Name: <span class="text-red-500">*</span> </label>
-                            <input type="text" placeholder="Name"
+                            <input type="text" name="name" placeholder="Name"
                                 class="block w-full rounded-md border-0 py-2.5 px-4 outline-none text-gray-900 ring-0 bg-zinc-100 ring-inset focus:ring-2 focus:ring-inset focus:ring-indigo-600 mt-2 sm:text-sm sm:leading-7 dark:bg-primary-black dark:ring-gray-950 dark:text-slate-400">
                         </div>
                         <div class="my-4">
                             <label for="" class="dark:text-slate-400">E-Mail: <span class="text-red-500">*</span>
                             </label>
-                            <input type="email" placeholder="Name"
+                            <input type="email" name="email" placeholder="Name"
                                 class="block w-full rounded-md border-0 py-2.5 px-4 outline-none text-gray-900 ring-0 bg-zinc-100 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 mt-2 sm:text-sm sm:leading-7 dark:bg-primary-black dark:ring-gray-950 dark:text-slate-400">
                         </div>
                         <div class="my-4">
                             <label for="" class="dark:text-slate-400">Subject: <span class="text-red-500">*</span>
                             </label>
-                            <input type="text" placeholder="Subject"
+                            <input type="text" name="subject" placeholder="Subject"
                                 class="block w-full rounded-md border-0 py-2.5 px-4 outline-none text-gray-900 ring-0 bg-zinc-100 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 mt-2 sm:text-sm sm:leading-7 dark:bg-primary-black dark:ring-gray-950 dark:text-slate-400">
                         </div>
                         <div class="my-4">
                             <label for="" class="dark:text-slate-400">Message: <span
                                     class="text-red-500">*</span></label>
-                            <textarea placeholder="Message"
+                            <textarea name="message" placeholder="Message"
                                 class="block w-full rounded-md border-0 py-2.5 px-4 outline-none text-gray-900 ring-0 bg-zinc-100 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 mt-2 sm:text-sm sm:leading-7 dark:bg-primary-black dark:ring-gray-950 dark:text-slate-400"
                                 rows="3"></textarea>
                         </div>
@@ -129,6 +137,7 @@
                             class="bg-indigo-500 text-white rounded-md px-4 py-2.5 mt-3 transition-all duration-300 hover:bg-indigo-600 hover:scale-95">
                             Gönder </button>
                     </form>
+                    <div id="responseMessage" class="mt-3 bg-red-600 bg-green-600 text-white py-3 px-3 rounded-md" style="display: none;"></div>
                 </div>
             </div>
         </section>
@@ -164,6 +173,8 @@
     </footer>
 
     <script src="./js/main.js"></script>
+    <script src="./js/contact.js"></script>
+
 </body>
 
 </html>
